@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Obrisati ovaj dio %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Primjeri}
+
+\subsection{Slika}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{pmf.png}
+		\caption{Logo PMF koji nije Word 2003 clip art}
+	\end{center}
+\end{figure}
+
+\subsection{Zadatak}
+% U preamble.tex je definisan \newtheorem{zadatak}{Zadatak}.
+% Okruženje je automatski numerisano na isti način kao i \section itd.
+% Komanda \dd daje pravilan znak diferencijala.
+\begin{zadatak}
+	\label{prvi-integral}
+	Izračunati integral $I$ ako je $D$ oblast ograničena sa $y_1=2x^2, \ y_2 = 1+x^2$.
+	\[
+	I = \iint_D (x+2y) \ \dd x \dd y
+	.\] 
+\end{zadatak}
+
+% Tikz može da generiše grafike na osnovu jednačina.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[	ymin=-1,ymax=3,xmax=2,xmin=-2,%xticklabel=\empty,yticklabel=\empty,
+			minor tick num=1,axis on top,axis lines = middle,
+			xlabel=$x$,ylabel=$y$,label style={at={(ticklabel cs:1.1)}}]
+			\addplot[blue, samples=50, domain=-1.5:1.5]{2*x^2};
+			\addplot[red, samples=50, domain=-1.5:1.5]{1+x^2};
+			\addplot[name path=A, blue, samples=50, domain=-1:1]{2*x^2};
+			\addplot[name path=B,red, samples=50, domain=-1:1]{1+x^2};
+			\node[label={180:{(-1,2)}},circle,fill,inner sep=1pt] at (axis cs:-1,2) {};
+			\node[label={180:{(1,2)}},circle,fill,inner sep=1pt] at (axis cs:1,2) {};
+			\addplot[blue!15] fill between[of=A and B];
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Slika uz zadatak \ref{prvi-integral}}
+\end{figure}
+
+Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka su dakle $(1,2)$ i $(-1,2)$.
+
+\[
+x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
+.\] 
+
+% Okruženje alignat vertikalno poravna znakove obilježene sa &.
+% Bez zvjezdice daje numerisane linije.
+% Numerisati samo jednu liniju se može sa \tag{1} na kraju linije.
+\begin{alignat*}{1}
+	I 	&= \int_{-1}^{1} \dd x \int_{2x^2}^{1+x^2}(x+2y) \ \dd y 
+	= \int_{-1}^{1} \dd x \left( xy\Big|_{2x^2}^{1+x^2} + 2y^2 \Big|_{2x^2}^{1+x^2} \right) \\
+	&= \int_{-1}^{1} \left\{ x(1+x^2-2x^2) + 2 \left[ (1+x^2)^2 - (2x^2)^2 \right] \right\} \dd x \\
+	&= \ldots = \frac{32}{15}
+.\end{alignat*}
+
+
+\subsection{Tabela}
+% Preuzeto sa:
+% https://latex-tutorial.com/tutorials/tables/
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{l|S|r}
+			\toprule % <-- Toprule here
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+			$\alpha$ & $\beta$ & $\gamma$ \\
+			\midrule % <-- Midrule here
+			1 & 1110.1 & a\\
+			2 & 10.1 & b\\
+			3 & 23.113231 & c\\
+			\bottomrule % <-- Bottomrule here
+		\end{tabular}
+		\caption{Tabela s paketom booktabs.}
+	\end{center}
+\end{table}
+
+\subsection{Kompleksnija tabela}
+% Primjer tabele preuzet sa
+% https://tex.stackexchange.com/questions/112343/beautiful-table-samples
+\begin{table}[h]
+	\centering
+	\begin{tabular}{SSSSSSSS} \toprule
+		{$m$} & {$\Re\{\underline{\mathfrak{X}}(m)\}$} & {$-\Im\{\underline{\mathfrak{X}}(m)\}$} & {$\mathfrak{X}(m)$} & {$\frac{\mathfrak{X}(m)}{23}$} & {$A_m$} & {$\varphi(m)\ /\ ^{\circ}$} & {$\varphi_m\ /\ ^{\circ}$} \\ \midrule
+		1  & 16.128 & +8.872 & 16.128 & 1.402 & 1.373 & -146.6 & -137.6 \\
+		2  & 3.442  & -2.509 & 3.442  & 0.299 & 0.343 & 133.2  & 152.4  \\
+		3  & 1.826  & -0.363 & 1.826  & 0.159 & 0.119 & 168.5  & -161.1 \\
+		4  & 0.993  & -0.429 & 0.993  & 0.086 & 0.08  & 25.6   & 90     \\ \midrule
+		5  & 1.29   & +0.099 & 1.29   & 0.112 & 0.097 & -175.6 & -114.7 \\
+		6  & 0.483  & -0.183 & 0.483  & 0.042 & 0.063 & 22.3   & 122.5  \\
+		7  & 0.766  & -0.475 & 0.766  & 0.067 & 0.039 & 141.6  & -122   \\
+		8  & 0.624  & +0.365 & 0.624  & 0.054 & 0.04  & -35.7  & 90     \\ \midrule
+		9  & 0.641  & -0.466 & 0.641  & 0.056 & 0.045 & 133.3  & -106.3 \\
+		10 & 0.45   & +0.421 & 0.45   & 0.039 & 0.034 & -69.4  & 110.9  \\
+		11 & 0.598  & -0.597 & 0.598  & 0.052 & 0.025 & 92.3   & -109.3 \\ \bottomrule
+	\end{tabular}
+	\caption{Kompleksna tabela}
+\end{table}
+
+\subsection{Mjerne jedinice}
+
+Paket \texttt{siunits} dozvoljava da se lako i pravilno pišu veličine koje imaju mjerne jedinice. Kako se često pogrešno radi: $g = 9.81 ms^{-2}$.
+Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
+
+
+

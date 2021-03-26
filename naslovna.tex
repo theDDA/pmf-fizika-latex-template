@@ -1,0 +1,37 @@
+\begin{titlepage}
+	\begin{figure}[t]
+		\centering
+		\begin{minipage}{.6\textwidth}
+			\centering
+			\textsc{\large Univerzitet u Sarajevu}\\
+			\textsc{\large Prirodno-matematički fakultet}\\
+			\textsc{\large Odsjek za fiziku}
+		\end{minipage}
+	\end{figure}
+	\vspace*{\fill}
+	\begin{center}
+		% Obrisati \MakeUppercase u ova dva reda ukoliko nisu potrebna velika slova.
+		\textbf{\Large \MakeUppercase\@naslov}\\
+		\vspace{2mm}
+		\large \MakeUppercase\@podnaslov
+	\end{center}
+	\vspace*{\fill}
+	\begin{figure}[b]
+		\centering
+		\begin{minipage}{.3\textwidth}
+			\textbf{Student: \@student}\\
+			\@indeks \\
+		\end{minipage}
+		\begin{minipage}{.35\textwidth}
+			\begin{center}
+				% Ako neko zna bolji način da se ovo uradi, a sigurno ima,
+				% neka mi se javi na mail pa izmijenim.
+				\vspace{25mm}
+				Sarajevo, \@datum
+			\end{center}
+		\end{minipage}
+		\begin{minipage}{.3\textwidth}
+			\textbf{Profesor: \@profesor }\\
+		\end{minipage}
+	\end{figure}
+\end{titlepage}

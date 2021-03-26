@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template za studente PMF Fizika u Sarajevu. Prvobitno je namijenjen za seminarski rad,
+% kao i za neku malu edukaciju oko latexa, ali se može uz male prepravke iskoristiti i
+% za diplomski ili magistarski rad.
+%
+% Ubačeno je dosta komentara i primjera da bi adaptacija bila što lakša, kao i neki
+% korisni linkovi s primjerima.
+%
+% Inspirisano sličnim templateom sa ETF:
+% https://www.overleaf.com/latex/templates/template-za-izvjestaje-elektrotehnicki-fakultet-sarajevo/kbvbhqnyntsg
+%
+% Autor: Damir Agačević, 2021.
+% damir.agacevic@gmail.com
+% https://github.com/theDDA/
+% GNU GPLv3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{preamble}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Popuniti ovaj dio %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Ukoliko ne želite sva velika slova, ući u naslovna.tex i obrisati obilježeni dio.
+	\naslov{naslov}
+	\podnaslov{podnaslov}
+	\student{Ime Studenta}
+	\indeks{1234/F}
+	% Kada se pišu skraćenice uvijek koristiti ~ umjesto razmaka iza tačke inače se
+	% dobijaju neželjeni razmaci i prelomi jer latex smatra da je kraj rečenice.
+	\profesor{prof.~dr.~Ime Profesora}
+	% Po defaultu samo godina.
+	\datum{\the\year.}
+	%\datum{\today}
+	%\datum{01.~april 2020.}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\include{naslovna}
+	% Nemojte zaboraviti: da bi se sadržaj, spisak, reference, fusnote itd. pravilno
+	% prikazali, morate dvaput kompajlirati. Neki softverski paketi
+	% to urade sami, ali ako vam nešto nije uredu probajte prvo ručno dva puta
+	% pritisnuti compile/build/run (kako se već zove u vašem softveru).
+	\tableofcontents
+	\newpage
+	\listoffigures
+	% Ubaciti \newpage ako hoćete da su spiskovi svaki na svojoj stranici.
+	\listoftables
+	
+	% Dobra je praksa odvajati veće odjeljke svaki u svoj fajl, mada za seminarske radove
+	% nema tolike potrebe za time.
+	\include{section_1}
+	\include{section_2}
+	
+\end{document}

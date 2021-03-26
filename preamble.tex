@@ -1,0 +1,56 @@
+% A4, 12pt font
+\documentclass[12pt,a4paper,final]{article}
+% Mogu se direktno unositi čćžđš.
+\usepackage[utf8]{inputenc}
+% Šire margine
+%\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=3.5cm]{geometry}
+\usepackage{fullpage}
+% Lokalizacija
+\usepackage[serbian]{babel}
+% Proširenje matematike
+\usepackage{amsmath, amsfonts}
+% Komanda \dd daje znak diferencijala koji je uspravan i malo odvojen
+% od podintegralne funkcije. Npr. $\int x \dd x$
+\newcommand\dd{\ \mathrm{d} }
+% Novo okruženje "Zadatak"
+\newtheorem{zadatak}{Zadatak}
+% Dozvoljava prelamanje align okruženja na novu stranicu
+\allowdisplaybreaks
+% Slike
+\usepackage{graphicx}
+% Linkovi
+\usepackage{hyperref}
+% Bolja tipografija i kerning
+\usepackage{microtype}
+% Proširenje za tabele
+\usepackage{booktabs}
+% Proširenje za floats, potrebno za komandu [H] kojom se forsira tačno mjesto slike/tabele.
+\usepackage{float}
+% Lakše unošenje jedinica.
+% Npr. $g = \SI{9.81}{\meter\per\second\squared}$
+\usepackage{siunitx}
+% Crtanje dijagrama u tikz
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{patchplots}
+\usepgfplotslibrary{fillbetween}
+% Crtanje kola u tikz
+\usepackage[RPvoltages]{circuitikz}
+
+% Dodavanje nekih funkcija kojih nema u latexu na način
+% na koji se pišu na našim prostorima.
+% Hiperbolne trigonometrijske:
+\DeclareMathOperator{\tgh}{th}
+% Vektorske operacije:
+\DeclareMathOperator{\rot}{rot}
+
+% Komande za unos podataka u naslovnu stranicu
+% Ne diraj ako ne znaš šta radiš :)
+\makeatletter
+\newcommand\naslov[1]{\def\@naslov{#1}}
+\newcommand\podnaslov[1]{\def\@podnaslov{#1}}
+\newcommand\student[1]{\def\@student{#1}}
+\newcommand\indeks[1]{\def\@indeks{#1}}
+\newcommand\profesor[1]{\def\@profesor{#1}}
+\newcommand\datum[1]{\def\@datum{#1}}
