@@ -21,7 +21,7 @@
 	Izračunati integral $I$ ako je $D$ oblast ograničena sa $y_1=2x^2, \ y_2 = 1+x^2$.
 	\[
 	I = \iint_D (x+2y) \ \dd{x} \dd{y}
-	.\] 
+	.\]
 \end{zadatak}
 
 % Tikz može da generiše grafike na osnovu jednačina.
@@ -47,16 +47,16 @@ Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka
 
 \[
 x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
-.\] 
+.\]
 
 % Okruženje alignat vertikalno poravna znakove obilježene sa &.
 % Bez zvjezdice daje numerisane linije.
 % Numerisati samo jednu liniju se može sa \tag{1} na kraju linije.
 \begin{alignat*}{1}
-	I 	&= \int_{-1}^{1} \dd{x} \int_{2x^2}^{1+x^2}(x+2y) \dd{y} 
+	I 	&= \int_{-1}^{1} \dd{x} \int_{2x^2}^{1+x^2}(x+2y) \dd{y}
 	= \int_{-1}^{1} \dd{x} \left( xy\Big|_{2x^2}^{1+x^2} + 2y^2 \Big|_{2x^2}^{1+x^2} \right) \\
 	&= \int_{-1}^{1} \left\{ x(1+x^2-2x^2) + 2 \left[ (1+x^2)^2 - (2x^2)^2 \right] \right\} \dd{x} \\
-	&= \ldots = \frac{32}{15}
+	&= \ldots = \frac{32}{15} \tag{1}
 .\end{alignat*}
 
 
@@ -118,7 +118,7 @@ Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \r
 		\begin{figure}[H]
 			\centering
 			\begin{tikzpicture}
-				\begin{axis}[	ymin=-0.5,ymax=2.5,xmax=2.5,xmin=-2.5,%xticklabel=\empty,yticklabel=\empty,
+				\begin{axis}[ymin=-0.5,ymax=2.5,xmax=2.5,xmin=-2.5,%xticklabel=\empty,yticklabel=\empty,
 					minor tick num=1,
 					axis lines = middle,
 					trig format plots=rad,
@@ -132,36 +132,40 @@ Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \r
 			\end{tikzpicture}
 			\caption{Slika uz zadatak \ref{12:zd-krint-kontura}}
 			\label{12:slika-krint-kontura}
-		\end{figure}	
+		\end{figure}
 	\end{minipage}
 	\begin{minipage}[t]{0.48\textwidth}
 		\[
 		\oint_C P\dd{x} + Q\dd{y} = \iint \left( \pdv{Q}{x} - \pdv{P}{y}  \right) \dd{x} \dd{y}
-		\] 
+		\]
 		\begin{alignat*}{3}
 			Q &= 3xy, \qquad && \pdv{Q}{{x}} &&= 3y \\
 			P &= y^2, \qquad && \pdv{P}{{y}} &&= 2y
 		\end{alignat*}
 		\[
 		r\Big|_1^{2}, \qquad \vp\Big|_0^{\pi}
-		\] 
+		\]
 	\end{minipage}
 \end{center}
 
 \begin{alignat*}{1}
 	\oint_C		&= \iint_C (3y-2y) \dd{x} \dd{y} = \iint_C y \dd{x} \dd{y} \\
-	&= \int_{1}^{2} \int_{0}^{\pi} r^2 \sin\vp \dd{r} \dd{\vp} 
-	= \frac{r^3}{3} \bigg|_1^{2} (- \cos \vp) \bigg|_0^{\pi} = \frac{14}{3}
+				&= \int_{1}^{2} \int_{0}^{\pi} r^2 \sin\vp \dd{r} \dd{\vp}
+				 = \frac{r^3}{3} \bigg|_1^{2} (- \cos \vp) \bigg|_0^{\pi} = \frac{14}{3}
 .\end{alignat*}
 
 \begin{zadatak}
 Ako je vektorsko polje oblika $\vb{F} = P \vb{i} + Q \vb{j} + R \vb{k}$ dokazati da je $\ddiv \rrot \vb{F} = 0$.
 \end{zadatak}
 \[
-\rrot \vb{F} = \left( \pdv{R}{{y}} -\pdv{Q}{{z}}  \right) \vb{i} - \left( \pdv{R}{{x}} -\pdv{P}{{z}}  \right) \vb{j} + \left( \pdv{Q}{{x}}  - \pdv{P}{{y}}  \right) \vb{k}
-\] 
+\rrot \vb{F} =	\left( \pdv{R}{y} - \pdv{Q}{z}  \right) \vb{i} -
+				\left( \pdv{R}{x} - \pdv{P}{z}  \right) \vb{j} +
+				\left( \pdv{Q}{x} - \pdv{P}{y}  \right) \vb{k}
+\]
 \[
-\ddiv \rrot \vb{F} = \pdv{}{{x}} \left(\pdv{R}{{y}} - \pdv{Q}{{z}} \right) - \pdv{}{{y}} \left( \pdv{R}{{x}} -\pdv{P}{{z}}  \right) + \pdv{ }{{x}} \left( \pdv{Q}{{x}} - \pdv{P}{{y}}  \right) = 0 
+\ddiv \rrot \vb{F} =	\pdv{}{x} \left( \pdv{R}{y} - \pdv{Q}{z} \right) -
+						\pdv{}{y} \left( \pdv{R}{x} - \pdv{P}{z} \right) +
+						\pdv{}{x} \left( \pdv{Q}{x} - \pdv{P}{y} \right) = 0
 .\]
 
 
