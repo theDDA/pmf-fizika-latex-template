@@ -6,6 +6,8 @@ Ubačeno je dosta komentara i primjera da bi adaptacija bila što lakša, kao i 
 
 Možete da direktno gore otvorite main.pdf i vidite kako to treba da izgleda.
 
+Ukoliko ne koristite inače GitHub, da preuzmete čitav projekt kliknite gore desno na Code i Download ZIP.
+
 Inspirisano sličnim templateom sa ETF:
 https://www.overleaf.com/latex/templates/template-za-izvjestaje-elektrotehnicki-fakultet-sarajevo/kbvbhqnyntsg
 
