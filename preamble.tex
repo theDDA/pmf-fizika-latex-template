@@ -9,11 +9,16 @@
 \usepackage[serbian]{babel}
 % Proširenje matematike
 \usepackage{amsmath, amsfonts}
-% Komanda \dd daje znak diferencijala koji je uspravan i malo odvojen
-% od podintegralne funkcije. Npr. $\int x \dd x$
-\newcommand\dd{\ \mathrm{d} }
+\newcommand\vp{ \varphi }
 % Novo okruženje "Zadatak"
 \newtheorem{zadatak}{Zadatak}
+% Komanda \diffp{x}{y} za parcijalne izvode.
+% Komanda \dd daje znak diferencijala koji je uspravan i malo odvojen
+% od podintegralne funkcije. Npr. $\int x \dd{x}$
+\usepackage{physics}
+\usepackage[thinc]{esdiff}
+% Vektorske operacije, komanda \vb{}
+\usepackage{esvect}
 % Dozvoljava prelamanje align okruženja na novu stranicu
 \allowdisplaybreaks
 % Slike
@@ -43,7 +48,9 @@
 % Hiperbolne trigonometrijske:
 \DeclareMathOperator{\tgh}{th}
 % Vektorske operacije:
-\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\rrot}{rot}
+\DeclareMathOperator{\ddiv}{div}
+\DeclareMathOperator{\ggrad}{grad}
 
 % Komande za unos podataka u naslovnu stranicu
 % Ne diraj ako ne znaš šta radiš :)
