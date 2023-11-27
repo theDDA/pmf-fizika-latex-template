@@ -1,3 +1,4 @@
+% !TEX root = ./main.tex
 % A4, 12pt font
 \documentclass[12pt,a4paper,final]{article}
 
@@ -13,13 +14,6 @@
 
 % Uvlačenje paragrafa
 \setlength{\parindent}{0pt}
-
-% Dozvoljava prelamanje align okruženja na novu stranicu
-\allowdisplaybreaks
-
-% Slike i tabele se numerišu prema poglavlju
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
 
 % Lokalizacija
 % Pošto sam upitan, bosnian ima nekih problema, croatian ima hrvatske mjesece.
@@ -76,6 +70,13 @@
 % Možemo okrenuti pojedinačne stranice na landscape, \begin{landscape}...\end{landscape}
 % Korisno za široke tabele.
 \usepackage{pdflscape}
+
+% Dozvoljava prelamanje align okruženja na novu stranicu
+\allowdisplaybreaks
+
+% Slike i tabele se numerišu prema poglavlju
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
 
 % Dodavanje nekih funkcija kojih nema u latexu na način
 % na koji se pišu na našim prostorima.
