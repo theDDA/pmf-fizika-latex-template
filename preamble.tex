@@ -1,39 +1,65 @@
 % A4, 12pt font
 \documentclass[12pt,a4paper,final]{article}
+
 % Mogu se direktno unositi čćžđš.
 \usepackage[utf8]{inputenc}
+
 % Šire margine
 %\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=3.5cm]{geometry}
 \usepackage{fullpage}
+
+% Odkomentarisati za veći prored
+%\renewcommand{\baselinestretch}{1.25}
+
+% Uvlačenje paragrafa
+\setlength{\parindent}{0pt}
+
+% Dozvoljava prelamanje align okruženja na novu stranicu
+\allowdisplaybreaks
+
+% Slike i tabele se numerišu prema poglavlju
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
 % Lokalizacija
+% Pošto sam upitan, bosnian ima nekih problema, croatian ima hrvatske mjesece.
+% (T)ko ima jezičkih problema, neka slobodno prebaci u bosnian ili croatian.
 \usepackage[serbian]{babel}
+
 % Proširenje matematike
 \usepackage{amsmath, amsfonts}
-\newcommand\vp{ \varphi }
-% Novo okruženje "Zadatak"
-\newtheorem{zadatak}{Zadatak}
+
+% Češće koristimo \varphi
+\newcommand\vp{\varphi}
+
 % Komanda \diffp{x}{y} za parcijalne izvode.
 % Komanda \dd daje znak diferencijala koji je uspravan i malo odvojen
 % od podintegralne funkcije. Npr. $\int x \dd{x}$
 \usepackage{physics}
 \usepackage[thinc]{esdiff}
+
 % Vektorske operacije, komanda \vb{}
 \usepackage{esvect}
-% Dozvoljava prelamanje align okruženja na novu stranicu
-\allowdisplaybreaks
+
 % Slike
 \usepackage{graphicx}
+
 % Linkovi
 \usepackage{hyperref}
+
 % Bolja tipografija i kerning
 \usepackage{microtype}
+
 % Proširenje za tabele
 \usepackage{booktabs}
+
 % Proširenje za floats, potrebno za komandu [H] kojom se forsira tačno mjesto slike/tabele.
 \usepackage{float}
+
 % Lakše unošenje jedinica.
 % Npr. $g = \SI{9.81}{\meter\per\second\squared}$
 \usepackage{siunitx}
+
 % Crtanje dijagrama u tikz
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -43,6 +69,14 @@
 % Crtanje kola u tikz
 \usepackage[RPvoltages]{circuitikz}
 
+% Podrška za prelome unutar captions, npr. \caption{Dug \\ tekst}
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+% Možemo okrenuti pojedinačne stranice na landscape, \begin{landscape}...\end{landscape}
+% Korisno za široke tabele.
+\usepackage{pdflscape}
+
 % Dodavanje nekih funkcija kojih nema u latexu na način
 % na koji se pišu na našim prostorima.
 % Hiperbolne trigonometrijske:
@@ -51,6 +85,9 @@
 \DeclareMathOperator{\rrot}{rot}
 \DeclareMathOperator{\ddiv}{div}
 \DeclareMathOperator{\ggrad}{grad}
+
+% Novo okruženje "Zadatak"
+\newtheorem{zadatak}{Zadatak}
 
 % Komande za unos podataka u naslovnu stranicu
 % Ne diraj ako ne znaš šta radiš :)
