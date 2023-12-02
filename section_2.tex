@@ -20,8 +20,8 @@
 	\label{prvi-integral}
 	Izračunati integral $I$ ako je $D$ oblast ograničena sa $y_1=2x^2, \ y_2 = 1+x^2$.
 	\[
-	I = \iint_D (x+2y) \ \dd{x} \dd{y}
-	.\]
+		I = \iint_D (x+2y) \ \dd{x} \dd{y}
+		.\]
 \end{zadatak}
 
 % Tikz može da generiše grafike na osnovu jednačina.
@@ -29,8 +29,8 @@
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[	ymin=-1,ymax=3,xmax=2,xmin=-2,%xticklabel=\empty,yticklabel=\empty,
-			minor tick num=1,axis on top,axis lines = middle,
-			xlabel=$x$,ylabel=$y$,label style={at={(ticklabel cs:1.1)}}]
+				minor tick num=1,axis on top,axis lines = middle,
+				xlabel=$x$,ylabel=$y$,label style={at={(ticklabel cs:1.1)}}]
 			\addplot[blue, samples=50, domain=-1.5:1.5]{2*x^2};
 			\addplot[red, samples=50, domain=-1.5:1.5]{1+x^2};
 			\addplot[name path=A, blue, samples=50, domain=-1:1]{2*x^2};
@@ -46,18 +46,18 @@
 Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka su dakle $(1,2)$ i $(-1,2)$.
 
 \[
-x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
-.\]
+	x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
+	.\]
 
 % Okruženje alignat vertikalno poravna znakove obilježene sa &.
 % Bez zvjezdice daje numerisane linije.
 % Numerisati samo jednu liniju se može sa \tag{1} na kraju linije.
 \begin{alignat*}{1}
-	I 	&= \int_{-1}^{1} \dd{x} \int_{2x^2}^{1+x^2}(x+2y) \dd{y}
-	= \int_{-1}^{1} \dd{x} \left( xy\Big|_{2x^2}^{1+x^2} + 2y^2 \Big|_{2x^2}^{1+x^2} \right) \\
-	&= \int_{-1}^{1} \left\{ x(1+x^2-2x^2) + 2 \left[ (1+x^2)^2 - (2x^2)^2 \right] \right\} \dd{x} \\
-	&= \ldots = \frac{32}{15} \tag{1}
-.\end{alignat*}
+	I & = \int_{-1}^{1} \dd{x} \int_{2x^2}^{1+x^2}(x+2y) \dd{y}
+	= \int_{-1}^{1} \dd{x} \left( xy\Big|_{2x^2}^{1+x^2} + 2y^2 \Big|_{2x^2}^{1+x^2} \right)          \\
+	  & = \int_{-1}^{1} \left\{ x(1+x^2-2x^2) + 2 \left[ (1+x^2)^2 - (2x^2)^2 \right] \right\} \dd{x} \\
+	  & = \ldots = \frac{32}{15} \tag{1}
+	.\end{alignat*}
 
 
 \subsection{Tabela}
@@ -67,12 +67,12 @@ x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
 	\begin{center}
 		\begin{tabular}{l|S|r}
 			\toprule % <-- Toprule here
-			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
-			$\alpha$ & $\beta$ & $\gamma$ \\
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3} \\
+			$\alpha$         & $\beta$          & $\gamma$         \\
 			\midrule % <-- Midrule here
-			1 & 1110.1 & a\\
-			2 & 10.1 & b\\
-			3 & 23.113231 & c\\
+			1                & 1110.1           & a                \\
+			2                & 10.1             & b                \\
+			3                & 23.113231        & c                \\
 			\bottomrule % <-- Bottomrule here
 		\end{tabular}
 		\caption{Tabela s paketom booktabs.}
@@ -86,17 +86,17 @@ x\Big|_{-1}^{1}, \qquad y \Big|_{2x^2}^{1+x^2}
 	\centering
 	\begin{tabular}{SSSSSSSS} \toprule
 		{$m$} & {$\Re\{\underline{\mathfrak{X}}(m)\}$} & {$-\Im\{\underline{\mathfrak{X}}(m)\}$} & {$\mathfrak{X}(m)$} & {$\frac{\mathfrak{X}(m)}{23}$} & {$A_m$} & {$\varphi(m)\ /\ ^{\circ}$} & {$\varphi_m\ /\ ^{\circ}$} \\ \midrule
-		1  & 16.128 & +8.872 & 16.128 & 1.402 & 1.373 & -146.6 & -137.6 \\
-		2  & 3.442  & -2.509 & 3.442  & 0.299 & 0.343 & 133.2  & 152.4  \\
-		3  & 1.826  & -0.363 & 1.826  & 0.159 & 0.119 & 168.5  & -161.1 \\
-		4  & 0.993  & -0.429 & 0.993  & 0.086 & 0.08  & 25.6   & 90     \\ \midrule
-		5  & 1.29   & +0.099 & 1.29   & 0.112 & 0.097 & -175.6 & -114.7 \\
-		6  & 0.483  & -0.183 & 0.483  & 0.042 & 0.063 & 22.3   & 122.5  \\
-		7  & 0.766  & -0.475 & 0.766  & 0.067 & 0.039 & 141.6  & -122   \\
-		8  & 0.624  & +0.365 & 0.624  & 0.054 & 0.04  & -35.7  & 90     \\ \midrule
-		9  & 0.641  & -0.466 & 0.641  & 0.056 & 0.045 & 133.3  & -106.3 \\
-		10 & 0.45   & +0.421 & 0.45   & 0.039 & 0.034 & -69.4  & 110.9  \\
-		11 & 0.598  & -0.597 & 0.598  & 0.052 & 0.025 & 92.3   & -109.3 \\ \bottomrule
+		1     & 16.128                                 & +8.872                                  & 16.128              & 1.402                          & 1.373   & -146.6                      & -137.6                     \\
+		2     & 3.442                                  & -2.509                                  & 3.442               & 0.299                          & 0.343   & 133.2                       & 152.4                      \\
+		3     & 1.826                                  & -0.363                                  & 1.826               & 0.159                          & 0.119   & 168.5                       & -161.1                     \\
+		4     & 0.993                                  & -0.429                                  & 0.993               & 0.086                          & 0.08    & 25.6                        & 90                         \\ \midrule
+		5     & 1.29                                   & +0.099                                  & 1.29                & 0.112                          & 0.097   & -175.6                      & -114.7                     \\
+		6     & 0.483                                  & -0.183                                  & 0.483               & 0.042                          & 0.063   & 22.3                        & 122.5                      \\
+		7     & 0.766                                  & -0.475                                  & 0.766               & 0.067                          & 0.039   & 141.6                       & -122                       \\
+		8     & 0.624                                  & +0.365                                  & 0.624               & 0.054                          & 0.04    & -35.7                       & 90                         \\ \midrule
+		9     & 0.641                                  & -0.466                                  & 0.641               & 0.056                          & 0.045   & 133.3                       & -106.3                     \\
+		10    & 0.45                                   & +0.421                                  & 0.45                & 0.039                          & 0.034   & -69.4                       & 110.9                      \\
+		11    & 0.598                                  & -0.597                                  & 0.598               & 0.052                          & 0.025   & 92.3                        & -109.3                     \\ \bottomrule
 	\end{tabular}
 	\caption{Kompleksna tabela}
 \end{table}
@@ -109,8 +109,8 @@ Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
 \subsection{Matematika}
 
 \begin{zadatak}
-\label{12:zd-krint-kontura}
-Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \ref{12:slika-krint-kontura}.
+	\label{12:zd-krint-kontura}
+	Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \ref{12:slika-krint-kontura}.
 \end{zadatak}
 
 \begin{center}
@@ -119,11 +119,11 @@ Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \r
 			\centering
 			\begin{tikzpicture}
 				\begin{axis}[ymin=-0.5,ymax=2.5,xmax=2.5,xmin=-2.5,%xticklabel=\empty,yticklabel=\empty,
-					minor tick num=1,
-					axis lines = middle,
-					trig format plots=rad,
-					unit vector ratio={1 1},
-					xlabel=$x$,ylabel=$y$,label style={at={(ticklabel cs:1.1)}}]
+						minor tick num=1,
+						axis lines = middle,
+						trig format plots=rad,
+						unit vector ratio={1 1},
+						xlabel=$x$,ylabel=$y$,label style={at={(ticklabel cs:1.1)}}]
 					\addplot[name path=A,blue, samples=50, domain=0:pi]({2*cos(x)},{2*sin(x)});
 					\addplot[name path=B,blue, samples=50, domain=0:pi]({cos(x)},{sin(x)});
 					\addplot +[blue, mark=none] coordinates {(-2, 0) (-1, 0)};
@@ -136,36 +136,35 @@ Izračunati $\displaystyle \oint y^2 \dd{x} + 3xy \dd{y}$ na konturi sa slike \r
 	\end{minipage}
 	\begin{minipage}[t]{0.48\textwidth}
 		\[
-		\oint_C P\dd{x} + Q\dd{y} = \iint \left( \pdv{Q}{x} - \pdv{P}{y}  \right) \dd{x} \dd{y}
+			\oint_C P\dd{x} + Q\dd{y} = \iint \left( \pdv{Q}{x} - \pdv{P}{y}  \right) \dd{x} \dd{y}
 		\]
 		\begin{alignat*}{3}
-			Q &= 3xy, \qquad && \pdv{Q}{{x}} &&= 3y \\
-			P &= y^2, \qquad && \pdv{P}{{y}} &&= 2y
+			Q & = 3xy, \qquad &  & \pdv{Q}{{x}} &  & = 3y \\
+			P & = y^2, \qquad &  & \pdv{P}{{y}} &  & = 2y
 		\end{alignat*}
 		\[
-		r\Big|_1^{2}, \qquad \vp\Big|_0^{\pi}
+			r\Big|_1^{2}, \qquad \vp\Big|_0^{\pi}
 		\]
 	\end{minipage}
 \end{center}
 
 \begin{alignat*}{1}
-	\oint_C		&= \iint_C (3y-2y) \dd{x} \dd{y} = \iint_C y \dd{x} \dd{y} \\
-				&= \int_{1}^{2} \int_{0}^{\pi} r^2 \sin\vp \dd{r} \dd{\vp}
-				 = \frac{r^3}{3} \bigg|_1^{2} (- \cos \vp) \bigg|_0^{\pi} = \frac{14}{3}
-.\end{alignat*}
+	\oint_C & = \iint_C (3y-2y) \dd{x} \dd{y} = \iint_C y \dd{x} \dd{y} \\
+	        & = \int_{1}^{2} \int_{0}^{\pi} r^2 \sin\vp \dd{r} \dd{\vp}
+	= \frac{r^3}{3} \bigg|_1^{2} (- \cos \vp) \bigg|_0^{\pi} = \frac{14}{3}
+	.\end{alignat*}
 
 \begin{zadatak}
-Ako je vektorsko polje oblika $\vb{F} = P \vb{i} + Q \vb{j} + R \vb{k}$ dokazati da je $\ddiv \rrot \vb{F} = 0$.
+	Ako je vektorsko polje oblika $\vb{F} = P \vb{i} + Q \vb{j} + R \vb{k}$ dokazati da je $\ddiv \rrot \vb{F} = 0$.
 \end{zadatak}
-\[
-\rrot \vb{F} =	\left( \pdv{R}{y} - \pdv{Q}{z}  \right) \vb{i} -
-				\left( \pdv{R}{x} - \pdv{P}{z}  \right) \vb{j} +
-				\left( \pdv{Q}{x} - \pdv{P}{y}  \right) \vb{k}
-\]
-\[
-\ddiv \rrot \vb{F} =	\pdv{}{x} \left( \pdv{R}{y} - \pdv{Q}{z} \right) -
-						\pdv{}{y} \left( \pdv{R}{x} - \pdv{P}{z} \right) +
-						\pdv{}{x} \left( \pdv{Q}{x} - \pdv{P}{y} \right) = 0
-.\]
+
+$$\begin{aligned}
+	\rrot \vb{F}       & =	\left( \pdv{R}{y} - \pdv{Q}{z}  \right) \vb{i} -
+	\left( \pdv{R}{x} - \pdv{P}{z}  \right) \vb{j} +
+	\left( \pdv{Q}{x} - \pdv{P}{y}  \right) \vb{k}\\
+	\ddiv \rrot \vb{F} & =	\pdv{}{x} \left( \pdv{R}{y} - \pdv{Q}{z} \right) -
+	\pdv{}{y} \left( \pdv{R}{x} - \pdv{P}{z} \right) +
+	\pdv{}{x} \left( \pdv{Q}{x} - \pdv{P}{y} \right) = 0
+	.\end{aligned}$$
 
 
