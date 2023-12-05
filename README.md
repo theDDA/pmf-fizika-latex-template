@@ -9,8 +9,8 @@ Možete da direktno gore otvorite main.pdf i vidite kako to treba da izgleda.
 Ukoliko ne koristite inače GitHub, da preuzmete čitav projekt kliknite gore desno na Code i Download ZIP.
 
 <center>
-
-![](./download.png)
+  
+![download](https://github.com/theDDA/pmf-fizika-latex-template/assets/11897251/7d8ee63e-ef64-40c5-888e-de7ff65af26c)
 
 </center>
 
