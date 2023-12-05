@@ -1,4 +1,21 @@
 % !TEX root = ./main.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template za studente PMF Fizika u Sarajevu. Prvobitno je namijenjen za seminarski rad,
+% kao i za neku malu edukaciju oko latexa, ali se može uz male prepravke iskoristiti i
+% za zadaću ili kao pomoć pri pravljenju seminarskog ili magistarskog rada.
+%
+% Ubačeno je dosta komentara i primjera da bi adaptacija bila što lakša, kao i neki
+% korisni linkovi s primjerima.
+%
+% Inspirisano sličnim templateom sa ETF:
+% https://www.overleaf.com/latex/templates/template-za-izvjestaje-elektrotehnicki-fakultet-sarajevo/kbvbhqnyntsg
+%
+% Autor: Damir Agačević, 2021.
+% damir.agacevic@gmail.com
+% https://github.com/theDDA/
+% GNU GPLv3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % A4, 12pt font
 \documentclass[12pt,a4paper,final]{article}
 
@@ -16,7 +33,11 @@
 \setlength{\parindent}{0pt}
 
 % Lokalizacija
-\usepackage[bosnian]{babel}
+% Pošto sam upitan, za bosnian nedostaju hyphenation patterns (tj. pravilno prelamanje
+% riječi), a croatian ima hrvatske mjesece. S obzirom na to, za default je uzet serbian.
+% (T)ko ima potrebu za specifičnim jezikom koji se govori na području BiH 
+% ili šire, neka slobodno prebaci u bosnian, croatian ili english.
+\usepackage[serbian]{babel}
 
 % Proširenje matematike
 \usepackage{amsmath, amsfonts}
