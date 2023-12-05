@@ -8,6 +8,12 @@ Možete da direktno gore otvorite main.pdf i vidite kako to treba da izgleda.
 
 Ukoliko ne koristite inače GitHub, da preuzmete čitav projekt kliknite gore desno na Code i Download ZIP.
 
+<center>
+
+![](./download.png)
+
+</center>
+
 Inspirisano sličnim templateom sa ETF:
 https://www.overleaf.com/latex/templates/template-za-izvjestaje-elektrotehnicki-fakultet-sarajevo/kbvbhqnyntsg
 
