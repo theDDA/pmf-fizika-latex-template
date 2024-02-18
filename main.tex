@@ -53,5 +53,12 @@
 	% nema tolike potrebe za time.
 	\include{section_1}
 	\include{section_2}
+
+	\newpage
+	% Izbacuje sve izvore koji su u main.bib
+	% Ukloniti da izbacuje samo izvore koji su eksplicitno citirani s \cite{}
+	\nocite{*}
+	% Zamijeniti "Izvori" s npr. "Bibliografija" itd.
+	\printbibliography[title={Izvori},heading=bibintoc]
 	
 \end{document}

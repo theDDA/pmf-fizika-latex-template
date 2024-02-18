@@ -8,7 +8,7 @@
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=0.3\textwidth]{pmf.png}
-		\caption{Logo PMF koji nije Word 2003 clip art}
+		\caption{Logo PMF koji nije Word 2003 clip art.}
 	\end{center}
 \end{figure}
 
@@ -40,7 +40,7 @@
 			\addplot[blue!15] fill between[of=A and B];
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Slika uz zadatak \ref{prvi-integral}}
+	\caption{Slika uz zadatak \ref{prvi-integral}.}
 \end{figure}
 
 Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka su dakle $(1,2)$ i $(-1,2)$.
@@ -79,6 +79,8 @@ Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka
 	\end{center}
 \end{table}
 
+Opcija \texttt{S} poravnava oko decimale u srednjem stupcu.
+
 \subsection{Kompleksnija tabela}
 % Primjer tabele preuzet sa
 % https://tex.stackexchange.com/questions/112343/beautiful-table-samples
@@ -98,7 +100,7 @@ Prvi korak je odrediti granice: $2x^2=1+x^2 \implies x = \pm 1$. Tačke presjeka
 		10    & 0.45                                   & +0.421                                  & 0.45                & 0.039                          & 0.034   & -69.4                       & 110.9                      \\
 		11    & 0.598                                  & -0.597                                  & 0.598               & 0.052                          & 0.025   & 92.3                        & -109.3                     \\ \bottomrule
 	\end{tabular}
-	\caption{Kompleksna tabela}
+	\caption{Kompleksna tabela.}
 \end{table}
 
 \subsection{Mjerne jedinice}
@@ -130,7 +132,7 @@ Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
 					\addplot +[blue, mark=none] coordinates {(1, 0) (2, 0)};
 				\end{axis}
 			\end{tikzpicture}
-			\caption{Slika uz zadatak \ref{12:zd-krint-kontura}}
+			\caption{Slika uz zadatak \ref{12:zd-krint-kontura}.}
 			\label{12:slika-krint-kontura}
 		\end{figure}
 	\end{minipage}
@@ -157,7 +159,6 @@ Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
 \begin{zadatak}
 	Ako je vektorsko polje oblika $\vb{F} = P \vb{i} + Q \vb{j} + R \vb{k}$ dokazati da je $\ddiv \rrot \vb{F} = 0$.
 \end{zadatak}
-
 \begin{alignat*}{1}
 	\rrot \vb{F}       & =	\left( \pdv{R}{y} - \pdv{Q}{z}  \right) \vb{i} -
 	\left( \pdv{R}{x} - \pdv{P}{z}  \right) \vb{j} +
@@ -166,3 +167,6 @@ Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
 	\pdv{}{y} \left( \pdv{R}{x} - \pdv{P}{z} \right) +
 	\pdv{}{x} \left( \pdv{Q}{x} - \pdv{P}{y} \right) = 0
 	.\end{alignat*}
+
+\subsection{Citiranje i izvori}
+\LaTeX~u sebi sadrži veliki broj alata za citiranje~\cite{wiki:latex}. U fajlu \texttt{main.bib} se nalaze primjeri nekoliko citata. Korisno je znati da svaka Wikipedia stranica (uključujući i slike na Wikimedia Commons~\cite{wiki:Bernoulli}) ima opciju \texttt{Tools->Cite this page}, na kojoj se između ostalog nalazi i Biblatex kod. Dovoljno je samo prekopirati prvi od dva u \texttt{main.bib} uz sitne izmjene (npr.~``accessed'' u ``pristupljeno''), te koji vodi na verziju Wikipedije u trenutku citiranja. Slična situacija je i sa arXiv i sl.~sajtovima. Ukoliko to nije dostupno, postojeći primjeri se mogu lako preinačiti u nešto korisno. Bitno je napomenuti da u slučaju više autora zarez označava razdvajanje ``Prezime, Ime'', dok ključna riječ ``and'' razdvaja autore. Vidi npr.~kod za \cite{Bender_1998}.
