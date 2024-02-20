@@ -86,6 +86,7 @@ Opcija \texttt{S} poravnava oko decimale u srednjem stupcu.
 % https://tex.stackexchange.com/questions/112343/beautiful-table-samples
 \begin{table}[h]
 	\centering
+	\setlength{\tabcolsep}{4pt}
 	\begin{tabular}{SSSSSSSS} \toprule
 		{$m$} & {$\Re\{\underline{\mathfrak{X}}(m)\}$} & {$-\Im\{\underline{\mathfrak{X}}(m)\}$} & {$\mathfrak{X}(m)$} & {$\frac{\mathfrak{X}(m)}{23}$} & {$A_m$} & {$\varphi(m)\ /\ ^{\circ}$} & {$\varphi_m\ /\ ^{\circ}$} \\ \midrule
 		1     & 16.128                                 & +8.872                                  & 16.128              & 1.402                          & 1.373   & -146.6                      & -137.6                     \\
@@ -169,4 +170,41 @@ Kako je pravilno: $g = \SI{9.81}{\meter\per\second\squared}$.
 	.\end{alignat*}
 
 \subsection{Citiranje i izvori}
-\LaTeX~u sebi sadrži veliki broj alata za citiranje~\cite{wiki:latex}. U fajlu \texttt{main.bib} se nalaze primjeri nekoliko citata. Korisno je znati da svaka Wikipedia stranica (uključujući i slike na Wikimedia Commons~\cite{wiki:Bernoulli}) ima opciju \texttt{Tools->Cite this page}, na kojoj se između ostalog nalazi i Biblatex kod. Dovoljno je samo prekopirati prvi od dva u \texttt{main.bib} uz sitne izmjene (npr.~``accessed'' u ``pristupljeno''), te koji vodi na verziju Wikipedije u trenutku citiranja. Slična situacija je i sa arXiv i sl.~sajtovima. Ukoliko to nije dostupno, postojeći primjeri se mogu lako preinačiti u nešto korisno. Bitno je napomenuti da u slučaju više autora zarez označava razdvajanje ``Prezime, Ime'', dok ključna riječ ``and'' razdvaja autore. Vidi npr.~kod za \cite{Bender_1998}.
+\LaTeX~u sebi sadrži veliki broj alata za citiranje izvora~\cite{wiki:latex}.
+U fajlu \texttt{main.bib} se nalaze primjeri nekoliko izvora.
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[t]{.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/wikipedia-cite.png}
+		\caption{Cite this page}
+		\label{fig:wiki-cite}
+	\end{minipage}%
+	\begin{minipage}[t]{.7\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{images/wikipedia-bibtex.png}
+		\captionof{figure}{Kopiraj ovaj kod u main.bib}
+		\label{fig:wiki-bib}
+	\end{minipage}
+\end{figure}
+
+
+Korisno je znati da svaka Wikipedia stranica (uključujući i slike na Wikimedia Commons~\cite{wiki:Bernoulli}) ima opciju \texttt{Tools->Cite this page}~(\ref{fig:wiki-cite}), na kojoj se (između ostalog) nalaze i dvije varijante Bibtex koda.
+Dovoljno je samo prekopirati prvi od dva u \texttt{main.bib} uz sitne izmjene (npr.~``accessed'' u ``pristupljeno'')~(\ref{fig:wiki-bib}).
+Slična situacija je i sa arXiv i sl.~sajtovima, vidi Sliku~\ref{fig:arxiv-cite}.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/arxiv-cite.png}
+		\caption{Citiranje s arxiva.}
+		\label{fig:arxiv-cite}
+	\end{center}
+\end{figure}
+
+Ukoliko to nije dostupno, postojeći primjeri se mogu lako preinačiti u nešto korisno.
+Bitno je napomenuti da u slučaju više autora zarez označava razdvajanje ``Prezime, Ime'', dok ključna riječ ``and'' razdvaja autore.
+Vidi npr.~kod za~\cite{Bender_1998}.\\
+
+S obzirom da većinom imamo potrebu navesti izvore, bez specifičnog citiranja u tekstu, default opcija je prikazivanje svih izvora navedenih u \texttt{main.bib}.
+Ako u tekstu želimo povezati neku izjavu sa specifičnim izvorom, dovoljno je u tekstu staviti npr.~\verb+\cite{Bender_1998}+.

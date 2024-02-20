@@ -43,6 +43,8 @@
 	% prikazali, morate dvaput kompajlirati. Neki softverski paketi
 	% to urade sami, ali ako vam nešto nije uredu probajte prvo ručno dva puta
 	% pritisnuti compile/build/run (kako se već zove u vašem softveru).
+	% Ukoliko radite online u Overleafu (ili, naprednije, ako koristite latexmk),
+	% ovo bi trebalo biti automatski.
 	\tableofcontents
 	\newpage
 	\listoffigures
@@ -51,12 +53,13 @@
 	
 	% Dobra je praksa odvajati veće odjeljke svaki u svoj fajl, mada za seminarske radove
 	% nema tolike potrebe za time.
+	% Napomena: Ovim odvajanjem svaki section počinje na novoj stranici.
 	\include{section_1}
 	\include{section_2}
 
 	\newpage
-	% Izbacuje sve izvore koji su u main.bib
-	% Ukloniti da izbacuje samo izvore koji su eksplicitno citirani s \cite{}
+	% Izbacuje sve izvore koji su u main.bib.
+	% Ukloniti da izbacuje samo izvore koji su eksplicitno citirani s \cite{}.
 	\nocite{*}
 	% Zamijeniti "Izvori" s npr. "Bibliografija" itd.
 	\printbibliography[title={Izvori},heading=bibintoc]
