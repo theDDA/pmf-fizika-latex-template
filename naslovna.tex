@@ -23,17 +23,23 @@
 		\centering
 		\begin{minipage}{.6\textwidth}
 			\centering
-			\textsc{\large Univerzitet u Sarajevu}\\
-			\textsc{\large Prirodno-matematički fakultet}\\
-			\textsc{\large Odsjek za fiziku}
+			\begin{spacing}{1.25}
+				\textsc{\large Univerzitet u Sarajevu}\\
+				\textsc{\large Prirodno-matematički fakultet}\\
+				\textsc{\large Odsjek za fiziku}\\
+			\end{spacing}
 		\end{minipage}
 	\end{figure}
 	\vspace*{\fill}
 	\begin{center}
 		% Obrisati \MakeUppercase u ova dva reda ukoliko nisu potrebna velika slova.
-		\textbf{\Large \MakeUppercase\@naslov}\\
+		\begin{spacing}{1.5}
+			{\bfseries \Large \MakeUppercase\@naslov}\\
+		\end{spacing}
 		\vspace{2mm}
-		\large \MakeUppercase\@podnaslov
+		\begin{spacing}{1}
+			\large \MakeUppercase\@podnaslov
+		\end{spacing}
 	\end{center}
 	\vspace*{\fill}
 	\begin{figure}[b]
